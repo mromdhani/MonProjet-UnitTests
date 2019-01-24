@@ -32,4 +32,13 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to MonProjet-UnitTests!');
   });
+
+  it(`should return  10 when adding 5 and 5`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    const a = 5;
+    const b = 5;
+    const expected = 10;
+    expect(app.additionner(a, b)).toEqual(expected);
+  });
 });
